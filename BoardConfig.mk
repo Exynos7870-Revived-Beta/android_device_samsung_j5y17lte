@@ -15,18 +15,15 @@
 
 DEVICE_PATH := device/samsung/j5y17lte
 
-# audio type guard
+# Audio
+TARGET_BOARD_HAS_OSS_AUDIO_HAL := true
+TARGET_BOARD_HAS_A6LTE_AUDIO_HAL := false
+TARGET_BOARD_HAS_M10LTE_AUDIO_HAL := false
+TARGET_BOARD_HAS_TFA_AMP := false
+BOARD_USES_EXYNOS7870_TFA_AMP := false
 TARGET_BOARD_HAS_TFA_SEC_AUDIO_HAL := false
 TARGET_BOARD_HAS_SEC_AUDIO_HAL := false
-
-ifeq ($(TARGET_BOARD_HAS_TFA_SEC_AUDIO_HAL),true)
-TARGET_BOARD_HAS_TFA_AMP := true
-endif
-
-# sec audio hal
 TARGET_BOARD_HAS_EXYNOS7870_SEC_AUDIOHAL := false
-
-TARGET_AUDIOHAL_VARIANT := samsung-exynos7870
 
 # Audiohal
 BOARD_USE_SPKAMP := true
@@ -75,6 +72,9 @@ WIFI_DRIVER_NVRAM_PATH           := "/vendor/etc/wifi/nvram_net.txt"
 WIFI_DRIVER_FW_PATH_STA          := "/vendor/etc/wifi/bcmdhd_sta.bin"
 WIFI_DRIVER_FW_PATH_AP           := "/vendor/etc/wifi/bcmdhd_apsta.bin"
 WIFI_BAND                        := 802_11_ABG
+
+# misc
+BUILD_BROKEN_VINTF_PRODUCT_COPY_FILES := true
 
 # inherit from common
 -include device/samsung/universal7870-common/BoardConfigCommon.mk
