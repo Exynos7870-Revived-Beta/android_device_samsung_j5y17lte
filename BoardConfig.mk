@@ -117,3 +117,6 @@ TW_NO_REBOOT_BOOTLOADER := true
 
 # Vendor separation
 TARGET_COPY_OUT_VENDOR := vendor
+
+# Battery
+TW_USE_LEGACY_BATTERY_SERVICES := true
