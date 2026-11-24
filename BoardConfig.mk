@@ -84,6 +84,7 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
+TARGET_USES_MKE2FS := true
 
 # Partitions (sizes from the stock PIT); the recovery one is also what makes
 # the build system set BUILDING_RECOVERY_IMAGE.
