@@ -127,6 +127,7 @@ TW_EXCLUDE_ZIP := true
 TW_NO_EXFAT_FUSE := true
 TW_EXCLUDE_TZDATA := true
 TW_NO_REBOOT_BOOTLOADER := true
+TW_HAS_DOWNLOAD_MODE := true
 
 # Vendor separation
 TARGET_COPY_OUT_VENDOR := vendor
